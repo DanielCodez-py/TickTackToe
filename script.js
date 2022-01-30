@@ -46,7 +46,7 @@ for(let i = 0; i < cellsLength; i++ ){
     cell.addEventListener("click",
         function() {
             universe.move_no ++;
-            universe.moves.push(universe.move_no);
+            universe.moves.push(i);
             // Simplify a long expression to a variable
             var x = universe.move_no;
 
@@ -56,7 +56,8 @@ for(let i = 0; i < cellsLength; i++ ){
                 cell.innerText = val;
                 // Double-click and double- value fix 
                 if (cell.innerText = val) {
-                    cell.setAttribute("class", "filled")
+                    cell.setAttribute("class", "filled");
+                    player_1.moved_cells.push(i)
                 }
                 // player_1.moves.push(Number(x));
             }
@@ -65,7 +66,8 @@ for(let i = 0; i < cellsLength; i++ ){
                 cell.innerText = val;
                 // Double-click and double- value fix 
                 if (cell.innerText = val) {
-                    cell.setAttribute("class", "filled")
+                    cell.setAttribute("class", "filled");
+                    player_2.moved_cells.push(i); 
                 }
                 // player_2.moves.push(Number(x));
             }
@@ -86,5 +88,8 @@ resetBtn.addEventListener('click', function(){
     player_2.value = "";
     universe.move_no = 0;
     universe.moves = [];
+    player_1.moved_cells = [];
+    player_2.moved_cells = [];
 })
+
 
