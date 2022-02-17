@@ -1,0 +1,5 @@
+Player Win Verification Algorithm
+Phase 1: Gather Data on player's moves
+    - Use player_[1 or 2].moved_cells array to get the index of the cells selected by the player
+Phase 2: Sort and Process Data
+    - 
